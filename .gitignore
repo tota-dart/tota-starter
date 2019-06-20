@@ -1,13 +1,7 @@
-# See https://www.dartlang.org/guides/libraries/private-files
+# Config file
+# The config is environment-specific, and should not be checked-in to git.
+.env
 
-# Files and directories created by pub
-.dart_tool/
-.packages
-.pub/
-build/
-# If you're building an application, you may want to check-in your pubspec.lock
-pubspec.lock
-
-# Directory created by dartdoc
-# If you don't generate documentation locally you can remove this line.
-doc/api/
+# Public directory for generated static files.
+# If you change this directory in the config, be sure to change it here too.
+public/
