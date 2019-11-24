@@ -1,93 +1,124 @@
-article > * {
-    min-width: 0;
+:root {
+  /* Typography */
+  --font-size: 16px;
+  --font-family: sans-serif;
+  --font-family-monospace: monospace;
+  --line-height: 1.55;
+  --text-decoration-style: normal;
+
+  /* Colors (HSL) */
+  --color-primary: 217, 71%;
+  --color-info: 204, 71%;
+  --color-success: 141, 53%;
+  --color-warning: 48, 100%;
+  --color-danger: 348, 86%;
+
+  /* Element modifiers */
+  --table-border-color: rgba(0, 0, 0, 0.2);
 }
 
-article > h1 {
-    font-family: Lucida Grande;
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  box-sizing: border-box;
 }
 
-article > p {    
-    --x-height-multiplier: 0.375;
-    --baseline-multiplier: 0.17;
-    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
-    letter-spacing: .01rem;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 21px;
-    line-height: 1.58;
-    letter-spacing: -.003em;
-    color: rgba(0,0,0,.84);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+body {
+  line-height: var(--line-height);
+  font-size: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-article > .aside {
-    font-family: Lucida Grande;
-    margin: 30px 20px;
-    color: #666;
-    font-size: 0.8em;
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+  margin: 2.75rem 0 1rem;
+  line-height: 1.15;
 }
 
-img {
-    width: 100%;
+h1 {
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 2.441em;
+}
+
+h3 {
+  font-size: 1.953em;
+}
+
+h4 {
+  font-size: 1.563em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+/* Elements */
+
+a {
+  color: inherit;
+  text-decoration-style: var(--text-decoration-style);
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+p {
+  margin-bottom: 1.25em;
 }
 
 code {
-    background: #eee;
-    padding: 2px 5px;
+  font-family: var(--font-family-monospace);
 }
 
-pre {
-    background: #eee;
-    padding: 10px 15px;
-    overflow: auto;
+/* Tables */
+
+table td,
+table th,
+.table td,
+.table th {
+  padding: 0.5em 0.75em;
+  vertical-align: top;
+  border: 1px solid var(--table-border-color);
+  border-width: 0 0 1px;
 }
 
-pre > code {
-    padding: 0;
+table th,
+.table th {
+  font-weight: bold;
+  border-width: 0 0 2px;
 }
 
-figure {
-    margin: 0;
+table th:not([align]),
+.table th:not([align]) {
+  text-align: left;
 }
 
-figure figcaption {
-    color: #666;
-    font-style: italic;
-    font-size: 0.8em;
+/* Other styles */
+
+main {
+  padding: 3em;
 }
 
-/* Grid */
-article {
-    display: grid;
-    grid-template-columns: 1fr 1fr 10px 740px 10px 1fr 1fr;
-}
-
-article > * {
-    grid-column: 4;
-}
-
-article > figure {
-    grid-column: 1 / -1;
-    margin: 20px 0;
-}
-
-article > .aside {
-    grid-column: 5 / -1;
-}
-
-article > blockquote {
-    grid-column: 3 / span 2;
-    margin: 0px 0;
-    color: #666;
-    border-left: 3px solid black;
-    padding-left: 10px;
-}
-
-/* General styling */
-
-html, body {
-    margin: 0;
-    padding: 0;
-    line-height: 1.4;
+.tota-logo {
+  width: 75px;
+  height: 75px;
 }
